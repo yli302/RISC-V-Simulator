@@ -1,0 +1,66 @@
+1.lb: signed extent
+2.lh: signed extent
+3.lw: signed extent
+4.ld:
+5.lbu:
+6.lhu:
+7.lwu:
+8.addi: unsigned-signed-unsigned
+9.slli:
+10.slti: signed extent; unsigned-signed; set value_rd 1/0
+11.sltiu: set value_rd 1/0
+12.xori: signed extent
+13.srli:
+14.srai: unsigned-signed-unsigned
+15.ori: signed extent
+16.andi: signed extent 
+17.auipc:
+18.addiw: signed extent(twice); unsigned-signed-unsigned
+19.slliw: signed extent
+20.srliw: signed extent
+21.sraiw: unsigned-signed-unsigned; signed extent
+22.sb: left shift imm11_5 and set imm11_0
+23.sh: left shift imm11_5 and set imm11_0
+24.sw: left shift imm11_5 and set imm11_0
+25.sd: left shift imm11_5 and set imm11_0
+26.add: convert unsigned to signed
+27.sub: convert unsigned to signed
+28.sll: 
+29.slt: convert unsigned to signed; set value_rd 1/0
+30.sltu: set value_rd 1/0
+31.xor:
+32.srl: 
+33.sra: convert unsigned to signed
+34.or:
+35.and: 
+36.lui: 
+37.addw: convert unsigned to signed; signed extent
+38.subw: convert unsigned to signed; signed extent
+39.sllw: signed extent
+40.srlw: signed extent
+41.sraw: signed extent
+42.beq: get imm_12_1 from imm4_1_11 and imm12_10_5; btb+set_pc
+43.bne: get imm_12_1 from imm4_1_11 and imm12_10_5; btb+set_pc
+44.blt: get imm_12_1 from imm4_1_11 and imm12_10_5; convert unsigned to signed; btb+set_pc
+45.bge: get imm_12_1 from imm4_1_11 and imm12_10_5; convert unsigned to signed; btb+set_pc
+46.bltu: get imm_12_1 from imm4_1_11 and imm12_10_5; btb+set_pc
+47.bgeu: get imm_12_1 from imm4_1_11 and imm12_10_5; btb+set_pc
+48.jalr: btb+set_pc
+49.jal: get imm_20_1 from imm20_10_1_11_19_12; btb+set_pc
+50.mul: convert unsigned to signed; signed extent
+51.mulh: convert unsigned to signed; signed extent
+52.mulhsu: convert unsigned to signed; signed extent
+53.mulhu: signed extent
+54.mulw: convert unsigned to signed; signed extent
+55.div: convert unsigned to signed
+56.divu: 
+57.rem: convert unsigned to signed
+58.remu:
+59.divw: convert unsigned to signed; signed extent
+60.divuw: signed extent
+61.remw: convert unsigned to signed; signed extent
+62.remuw: signed extent
+
+signed extent; convert unsigned to signed; unsigned-signed-unsigned; set value_rd 1/0;
+left shift imm11_5 and set imm11_0; get imm_12_1 from imm4_1_11 and imm12_10_5; btb+set_pc
+get imm_20_1 from imm20_10_1_11_19_12

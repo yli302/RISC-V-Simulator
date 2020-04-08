@@ -1,0 +1,49 @@
+**************************************************************************
+    			Assignment_1: single-cycle RISC-V processor	             
+**************************************************************************
+
+execute_single_instruction of our group is consist of three part:
+
+1. fetch instruction
+	in this part, the goal is to get the instruction.
+
+	a. get program counter.
+	b. read memory with pc, and get instruction.
+	c. move point of program counter by 4 bytes. (Becuase the instruction is 32-bit value)
+	d. return instruction.
+
+2. decode instruction
+	decode the instruction getted from part 1.
+
+	a. get instruction.
+	b. initial an instruction array, which will be returned later.
+	c. sperate the instruction based on instruction type (R, I, S, B, U, UJ)
+	d. package array by the sperated instruction.
+	   (each instruction gets a index in this step.)
+	e. return the instruction array.
+
+3. execute instruction
+	execute instructions, depends on 'The RISC-V Instruction Set Manual
+	Volume I: User-Level ISA Document Version 2.2'
+
+	a. get the instruction array, program counter, and the pointer of next program counter.
+	b. implement code based on 'The RISC-V Instruction Set Manual'
+
+---------------------------------------------------------------------------------------------
+
+
+In this assignment, there are 62 instructions which are implemented:
+	lb lh lw ld lbu lhu lwu addi slli slti sltiu xori srli srai ori
+	andi auipc addiw slliw srliw sraiw sb sh sw sd add sub sll slt
+	sltu xor srl sra or and lui addw subw sllw srlw sraw beq bne blt
+	bge bltu bgeu jalr jal mul mulh mulhsu mulhu mulw div divu rem
+	remu divw divuw remw remuw
+
+---------------------------------------------------------------------------------------------
+
+program counter =>
+instruction =>
+program counter + 4 bytes =>
+separeted instruction =>
+package instruction array =>
+implement execution
